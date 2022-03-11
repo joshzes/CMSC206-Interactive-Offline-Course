@@ -249,14 +249,13 @@ DG.QuizMaker = new Class( {
 
 		var winpath = location.pathname.split("/").slice(-1) + "";
 		var mod = winpath.charAt(4);
-		var quiz = winpath.charAt(6);
 
 		quizzes = JSON.parse(localStorage.getItem('quizzes'));
 
 		if(mod=='l')
 			quizzes['final'] = ret.percentageCorrectAnswers;
 		else
-			quizzes[mod][quiz] = ret.percentageCorrectAnswers;
+			quizzes[mod] = ret.percentageCorrectAnswers;
 
 		localStorage.setItem('quizzes', JSON.stringify(quizzes));
 

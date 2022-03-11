@@ -26,6 +26,11 @@ $(".list-unstyled li a").click(function(){
 	changeModule($(this).data("value"));
 });
 
+$("#module_questions button").click(function(){
+	question = $("#module_questions textarea").val();
+	saveQuestion(profile['current_module'], question);
+});
+
 $("#resources").click(function(){
 	changeModule(-1);
 });
@@ -36,6 +41,7 @@ $("#module_quiz").on("click", "strong a", function(){
 
 function changeModule(module){
 	iframe_desc_sub = "Study the course module below. Alternatively, you can download it here: ";
+	questions = JSON.parse(localStorage.getItem('questions'));
 	switch(module){
 		case -1:
 		 	$('#currentframe').attr('src', 'resources.html');	
@@ -70,6 +76,7 @@ function changeModule(module){
 			iframe_desc_header = "Topic " + module;
 			iframe_desc_sub += "<a href='modules/Module" + module + ".pdf' download target='_blank'> Topic " + module + ".pdf</a><br>Best to take the quiz linked below every after each lesson.";
 			$("#module_quiz").html("<strong><a href='#' data-module='"+ module +"'>Topic "+ module +" - Quiz</a></strong>");
+			$("#module_questions textarea").val(questions[module]);
 			$("#module_quiz").removeClass("invisible");
 			$("#module_questions").removeClass("invisible");
 	}
@@ -89,4 +96,11 @@ function changeQuiz(module){
 	}else{
 		window.alert("You need to get a perfect score on the previous quiz to proceed.");
 	}
+}
+
+function saveQuestion(module, question){
+	questions = JSON.parse(localStorage.getItem('questions'));
+	questions[module] = question;
+
+	localStorage.setItem('questions', JSON.stringify(questions));
 }

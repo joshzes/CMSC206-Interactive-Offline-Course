@@ -7,19 +7,24 @@ body{
 }
 
 .table{
+	margin-left: 5%;
 	margin-top: 30px;
-	width: 50%;
+	max-width: 90%;
+	table-layout: fixed;
 }
 
-th{
-	width: 30%;
+table a{
+	color: #720309;
 }
 
-table .btn{
-	width: 90px;
-	border-radius: 40px;
-	border: none;
-	background-color: #14660f;
+table a:hover{
+	color: #991118;
+}
+
+td:nth-of-type(3) {
+	white-space:pre;
+  overflow-wrap: break-word;
+  text-align: left;
 }
 
 @media print {

@@ -25,7 +25,7 @@ header{
 }
 
 .no-gutters img{
-	width: 600px;
+	width: 1500px;
 }
 
 li a{
@@ -33,10 +33,10 @@ li a{
 	color: #720309;
 }
 
-li a:hover{
-	color: #991118;
+a{
+	color: #720309;
 }
 
-.no-gutters .offset-sm-1{
-	margin-right: -2%;
+li a:hover, a:hover{
+	color: #991118;
 }

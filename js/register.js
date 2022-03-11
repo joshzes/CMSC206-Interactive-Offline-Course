@@ -27,13 +27,16 @@ $(".btn-block").click(function(event){
 	}
 
 	module_quiz = {};
-	for (var i = 1; i < 8; i++) {
+	module_questions = {};
+	for (var i = 1; i < 12; i++) {
 		module_quiz[i] = -1;
+		module_questions[i] = "";
 	}
 	module_quiz['final'] = -1;
 
 	localStorage.setItem('profile', JSON.stringify(fields));
 	localStorage.setItem('quizzes', JSON.stringify(module_quiz));
+	localStorage.setItem('questions', JSON.stringify(module_questions));
 
 	$(".form-input").css("display", "none");
 	$(".full-name").html(fields['firstname'] + " " + fields['lastname']);
