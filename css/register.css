@@ -1,5 +1,5 @@
 .container{
-	border-top: 10px solid #14660f;
+	border-top: 10px solid #720309;
 	border-radius: 10px;
 	padding: 2%;
 	background-color: #fff
@@ -33,7 +33,7 @@ small{
 	background-color: #eee;
 }
 
-.success-message, .year-trained, .years-as-nao{
+.success-message{
 	display: none;
 }
 

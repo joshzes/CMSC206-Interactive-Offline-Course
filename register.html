@@ -11,18 +11,15 @@
 </head>
 <body>
 	<header>
-	<div class="row no-gutters">
-		<div class="d-none d-sm-block col-sm-1 offset-sm-1"><img src="img/doh.jpg" class="img-fluid"></div>
-		<div class="d-none d-sm-block col-sm-1"><img src="img/nnc.png" class="img-fluid"></div>
-		<div class="col-xs-12 col-sm-6"><h1>eLearning Course on<br/>Local Nutrition Program Management</h1><br><h2>for Local Nutrition Workers</h2></div>
-		<div class="d-none d-sm-block col-sm-3"></div>
+	<div class="no-gutters text-center">
+		<img class="img-fluid" src="img/CMSC 206-2.jpg">
 	</div>
 	</header>
 
 	<div class="jumbotron d-flex align-items-center flex-column">
   		<div class="container form-input">
-	    	<h2>NNC eLearning Course Registration</h2>
-	    	<p>Please complete the form below to register for the e-Learning course on Local Nutrition Program Management.</p>
+	    	<h2>CMSC 206 Course Access Registration</h2>
+	    	<p class="text-center">Please complete the form below to register and access the CMSC 206 course package.</p>
 	    	<div class="alert alert-danger d-none" role="alert">
 	    		Oops! Some fields are missing.
 			</div>
@@ -30,6 +27,14 @@
 	    		<div class="form-group row">
 	    			<label class="col-sm-3 lead">Email address</label>
 	    			<input type="email" class="was-validated col-sm-7 form-control" name="email">
+				</div>
+				<div class="form-group row">
+	    			<label class="col-sm-3 lead">Student Number</label>
+	    			<input type="text" class="col-sm-7 form-control" name="stdno">
+				</div>
+				<div class="form-group row">
+	    			<label class="col-sm-3 lead">Year Started</label>
+	    			<input type="number" class="col-sm-7 form-control" name="year_started" min="2001" max="2022" step="1">
 				</div>
 				<div class="form-group row">
 	    			<label class="col-sm-3 lead">Username</label>
@@ -52,117 +57,22 @@
 					  <label class="form-check-label">Male</label>
 					</div>
 					<div class="form-check form-check-inline">
-					  <input class="form-check-input" type="radio" name="sex" value="Female" checked>
+					  <input class="form-check-input" type="radio" name="sex" value="Female">
 					  <label class="form-check-label">Female</label>
 					</div>
-				</div>
-				<div class="form-group row">
-	    			<label class="col-sm-3 lead">Age</label>
-	    			<input type="number" class="col-sm-7 form-control" name="age">
-				</div>
-				<div class="form-group row">
-	    			<label class="col-sm-3 lead">Cell Phone Number</label>
-	    			<input type="test" class="was-validated col-sm-7 form-control" name="cpnum">
-				</div>
-				<div class="form-group row">
-	    			<label class="col-sm-3 lead">Job Title</label>
-	    			<input type="text" class="col-sm-7 form-control" name="job_title">
-				</div>
-				<div class="form-group row">
-	    			<label class="col-sm-3 lead">Designated Nutrition Action Officer?</label>
-	    			<div class="form-check form-check-inline">
-					  <input class="form-check-input" type="radio" name="designated_nutrition_officer" value="Yes">
-					  <label class="form-check-label">Yes</label>
-					</div>
 					<div class="form-check form-check-inline">
-					  <input class="form-check-input" type="radio" name="designated_nutrition_officer" value="No" checked>
-					  <label class="form-check-label">No</label>
+					  <input class="form-check-input" type="radio" name="sex" value="Prefer not to say" checked>
+					  <label class="form-check-label">Prefer not to say</label>
 					</div>
-				</div>
-				<div class="form-group row years-as-nao">
-	    			<label class="col-sm-3 lead">Number of years as NAO</label>
-	    			<input type="number" class="col-sm-7 form-control" name="years_as_nao">
-				</div>
-				<div class="form-group row">
-	    			<label class="col-sm-3 lead">Organization/LGU/Agency</label>
-	    			<input type="text" class="col-sm-7 form-control" name="organization">
-				</div>
-				<div class="form-group row">
-	    			<label class="col-sm-3 lead">Office Address</label>
-	    			<input type="text" class="col-sm-7 form-control" name="office_address">
-				</div>
-				<div class="form-group row">
-	    			<label class="col-sm-3 lead">Region</label>
-	    			<select class="col-sm-7 form-control" name="region">
-						<option>NCR (National Capital Region)</option>
-						<option>CAR (Cordillera Administrative Region)</option>
-						<option>Region I (Ilocos Region)</option>   
-						<option>Region II (Cagayan Valley)</option>   
-						<option>Region III (Central Luzon)</option>   
-						<option>Region IV-A (Calabarzon)</option>
-						<option>MIMAROPA Region</option>
-						<option>Region V (Bicol Region)</option>   
-						<option>Region VI (Western Visayas)</option>   
-						<option>Region VII (Central Visayas)</option>   
-						<option>Region VIII (Eastern Visayas)</option>   
-						<option>Region IX (Zamboanga Peninsula)</option>   
-						<option>Region X (Northern Mindanao)</option>   
-						<option>Region XI (Davao Region)</option>   
-						<option>Region XII (SOCCSKSARGEN)</option>   
-						<option>Region XIII (Caraga)</option>   
-						<option>ARMM (Autonomous Region in Muslim Mindanao)</option>
-					</select>
-				</div>
-				<div class="form-group row">
-	    			<label class="col-sm-3 lead">Mailing Address of Certificate</label>
-	    			<input type="text" class="col-sm-7 form-control" name="mailing_address">
-				</div>
-				<div class="form-group row">
-	    			<label class="col-sm-3 lead">Years in Service<small class="form-text text-muted">only in current position</small></label>
-	    			<input type="number" class="col-sm-7 form-control" name="years_service" value="0">
-				</div>
-				<br>
-				<div class="form-group ">
-	    			<label class="lead">Have you received previous training on Nutrition Program Management (NPM)?</label>
-	    			<div class="form-check form-check-inline">
-					  <input class="form-check-input" type="radio" name="previous_npm_training" value="Yes">
-					  <label class="form-check-label">Yes</label>
-					</div>
-					<div class="form-check form-check-inline">
-					  <input class="form-check-input" type="radio" name="previous_npm_training" value="No" checked>
-					  <label class="form-check-label">No</label>
-					</div>
-				</div>
-				<div class="form-group row year-trained">
-	    			<label class="col-sm-3 lead">Year Trained on NPM</label>
-	    			<input type="number" class="col-sm-7 form-control" name="npm_training_year" min="1900" max="2100" step="1">
-				</div>
-				<div class="form-group row">
-	    			<label class="col-sm-3 lead">Purpose for taking the course</label>
-	    			<textarea class="col-sm-7 form-control" name="purpose_of_training" rows="2"></textarea>
-				</div>
-				<br>
-				<h5>For Continuing Professional Education (CPE) Units</h5>
-				<div class="form-group row">
-	    			<label class="col-sm-3 lead">Profession<small class="form-text text-muted">(e.g. Nutritionist-Dietician)</small></label>
-	    			<input type="text" class="col-sm-7 form-control" name="profession">
-				</div>
-				<div class="form-group row">
-	    			<label class="col-sm-3 lead">PRC ID Number</label>
-	    			<input type="text" class="col-sm-7 form-control" name="prc_id">
-				</div>
-				<div class="form-group row">
-	    			<label class="col-sm-3 lead">PRC ID Expiration</label>
-	    			<input type="date" class="col-sm-7 form-control" name="prc_expiration">
 				</div>
 				<br>
 	    	</form>	
 
-	    	<button class="btn btn-success btn-block" type="button">Submit</button>
+	    	<button class="btn btn-primary btn-block" type="button">Submit</button>
   		</div>
 
   		<div class="container success-message">
-	    	<h2>NNC eLearning Course Registration</h2>
+	    	<h2>CMSC 206 Course Access Registration</h2>
 	    	<p>Registration successful!</p>
 	    	<p>Thank you for registering, <span class="full-name"></span>.</p>
 	    	
@@ -170,17 +80,8 @@
 	    		<li><a href="#" id="dlcred">Download credentials</a></li>
 	    		<li><a href="profile.html" target="_blank">Download profile</a></li>
 	    	</ul>
-
-	    	<p>To help us monitor the number of offline users and to receive updates, please text us at <strong>0945-572-6396</strong> with the following details:</p>
-			<ul>
-				<li>Full Name</li>
-				<li>LGU</li>
-				<li>LGU Address</li>
-				<li>Date Started</li>
-			</ul>
-
-	    	<p>You can now start the course on Nutrition Program Management.</p>
-	    	<a class="btn btn-success" href="course.html" role="button" target="_blank">Start &#10145;</a>
+	    	<p>You can now access the CMSC 206 - Data Management Systems course package.</p>
+	    	<a class="btn btn-primary" href="course.html" role="button" target="_blank">Start &#10145;</a>
   		</div>
 	</div>
 

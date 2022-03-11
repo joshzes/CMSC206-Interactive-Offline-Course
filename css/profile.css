@@ -46,3 +46,8 @@ th{
 header .col-sm-1:first-child{
 	margin-right: -2%;
 }
+
+.btn-primary, .btn-block{
+	background-color: #720309;
+	border-color: #720309;
+}

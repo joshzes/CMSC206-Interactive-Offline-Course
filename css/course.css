@@ -1,9 +1,9 @@
-#module_content ul, h5{
-	margin: 20% 10%;
+#module_content ul, h6{
+	margin: 10% 10%;
 	text-align: center;
 }
 
-#module_content li:nth-of-type(11){
+#module_content li:nth-of-type(14){
 	border-top: 1px solid #12520e;
 	border-width: 50%;
 }
@@ -12,7 +12,7 @@ li a, li a:hover{
 	text-decoration: none;
 }
 
-li a:active{
+li a:active, li a:focus{
 	text-decoration: bold;
 }
 
@@ -20,20 +20,24 @@ li a:active{
 	margin-top: 10px;
 }
 
-h5 a, h5 a:hover{
-	color: #14660f;
+h6 a, h6 a:hover{
+	color: #720309;
 }
 
 #module_quiz{
 	background-color: white;
-	margin-left: 20px;
+	margin: 0 2%;
 }
 
-#module_quiz strong{
-	margin: 0 2%;
+#module_quiz a{
+	color: #720309;
 }
 
 #iframe_desc p{
 	margin-bottom: 1px;
 	font-size: 13px;
+}
+
+#module_questions{
+	margin-top: 5%;
 }
