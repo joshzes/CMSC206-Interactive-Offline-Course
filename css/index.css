@@ -1,0 +1,75 @@
+html, body {
+  height: 100%;
+}
+
+header{
+	padding-bottom: 1%;
+	background-color: #14660f;
+	color: #fff;
+}
+
+.btn-success{
+	background-color: #14660f;
+}
+
+.jumbotron{
+	margin-bottom: 0;
+}
+
+
+li a{
+	text-decoration: underline;
+	color: #14660f;
+}
+
+li a:hover{
+	color: #2b9c24;
+}
+
+.no-gutters img{
+	width: 105px;
+	border-radius: 100%;
+    box-shadow: 0 0 35px rgba(255, 255, 255, 0.7); 
+	margin-top: 10%;
+}
+
+.no-gutters .offset-sm-1{
+	margin-right: -2%;
+}
+
+header h1{
+	padding-top: 1%;
+	text-align: center;
+}
+
+h1 {
+	font-size:2.5rem;
+	margin-bottom: 0;
+}
+
+h2 {
+	margin-top: -15px;
+	text-align: center;
+	font-size:1.5rem;	
+}
+
+/* adjust size of h1 depending on screen size */
+@media (min-width: 576px) {
+    header h1 { font-size: 1.5rem; }
+}
+@media (min-width: 768px) {
+    header h1 { font-size: 1.75rem; }
+}
+@media (min-width: 992px) {
+    header h1 { font-size: 2rem; }
+	.no-gutters .offset-sm-1{ margin-right: 1%; }
+}
+@media (min-width: 1200px) {
+    header h1 { font-size: 2.25rem; }
+    .no-gutters .offset-sm-1{ margin-right: 0%;}
+}
+@media (min-width: 1600px) {
+    header h1 { font-size: 2.5rem; }
+    .extra-space {width: 0}
+    .no-gutters .offset-sm-1{ margin-right: -2%;}
+}
