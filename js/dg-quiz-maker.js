@@ -247,18 +247,15 @@ DG.QuizMaker = new Class( {
 		ret.numCorrectAnswers = numCorrectAnswers;
 		ret.percentageCorrectAnswers = Math.round(numCorrectAnswers / this.internal.questions.length *100);
 
-		var winpath = location.pathname.split("/").slice(-1) + "";
-		var mod = winpath.charAt(4);
-
+		var topic = document.getElementsByTagName("title")[0].innerHTML.charAt(6);
 		quizzes = JSON.parse(localStorage.getItem('quizzes'));
 
-		if(mod=='l')
+		if(topic=='E')
 			quizzes['final'] = ret.percentageCorrectAnswers;
 		else
-			quizzes[mod] = ret.percentageCorrectAnswers;
+			quizzes[topic] = ret.percentageCorrectAnswers;
 
 		localStorage.setItem('quizzes', JSON.stringify(quizzes));
-
 
 		return ret;
 	},

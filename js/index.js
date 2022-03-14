@@ -19,17 +19,10 @@ $("#dlcred").click(function(event){
 function checkTotal(){
 	quizzes = JSON.parse(localStorage.getItem('quizzes'));
 	toReturn = true;
-	$.each(quizzes, function(modnum, quiz) {
-		if(modnum!='final'){
-	    	$.each(quiz, function(qnum, score) {
-		    	if(qnum){
-		    		if(score < 100){
-		    			toReturn = false;
-		    			return false;
-		    		}
-		    	}
-		    });
-		}
+	$.each(quizzes, function(modnum, score) {
+		if(modnum!='final')
+	    	if(score < 100)
+	   			toReturn = false;
 	});
 
 	return toReturn;
