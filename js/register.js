@@ -29,7 +29,7 @@ $(".btn-block").click(function(event){
 	module_quiz = {};
 	module_questions = {};
 	for (var i = 1; i <= 12; i++) {
-		module_quiz[i] = -1;
+		module_quiz[i] = 100;
 		module_questions[i] = "";
 	}
 	module_quiz['final'] = -1;

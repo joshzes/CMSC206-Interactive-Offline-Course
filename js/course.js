@@ -4,13 +4,14 @@ $(document).ready(function() {
 
 	var url = window.location.href;
 	try{
-		var mqparam = url.split('?')[1].split('=');
-		mqparam.shift();
-		mqparam = mqparam + "";
+		var quizAlpha = url.split('?')[1].split('=');
+		quizAlpha.shift();
+		quizAlpha = quizAlpha + "";
 
-		if(mqparam){
-			changeModule(mqparam.charAt(0));
-			changeQuiz(mqparam.charAt(0),mqparam.charAt(1));
+		if(quizAlpha){
+			quizNum = quizAlpha.charCodeAt(0) - 96;
+			changeModule(quizNum);
+			changeQuiz(quizNum);
 		}
 	}catch(e){
 
@@ -51,25 +52,22 @@ function changeModule(module){
 			$("#module_questions").addClass("invisible");
 			break;
 		case 0:
-			//$('#currentframe').attr('src', 'modules/courseguide.pdf');	
 			$('#currentframe').attr('src', 'introduction.html');	
 			iframe_desc_header = "";
 			iframe_desc_sub = ""
-			//iframe_desc_sub += "<a href='modules/courseguide.pdf' download target='_blank'> Course Guide.pdf</a>";
 			$("#module_quiz").addClass("invisible");
 			$("#module_questions").addClass("invisible");
 			break;
 		case 13:
 			if(checkTotal()){
 				$('#currentframe').attr('src', 'quiz/final-exam.html');
-				$("#module_quiz .list-inline").html(qcontent);
-				iframe_desc_header = "Final Exam";
-				iframe_desc_sub = "This is your final requirement for this course.<br>You need to get 80% of your answers correctly to be able to complete the course.<br>You can also retry this exam as many times as you want."
+				iframe_desc_header = "";
+				iframe_desc_sub = ""
 				$("#module_quiz").addClass("invisible");
+				$("#module_questions").addClass("invisible");
 			}else{
 				window.alert("You need to get 100% in all of the quizzes to be able to take the final exam.")
 			}
-			$("#module_questions").addClass("invisible");
 			break;
 		default:
 			$('#currentframe').attr('src', 'modules/Module'+ module +'.pdf');

@@ -23,7 +23,7 @@ $(document).ready(function() {
 
 	$("tbody").append(table_content);
 
-	fscore = (quizzes['final'] != -1) ? quizzes['final'] : "Not yet attempted";
+	fscore = (quizzes['final'] != -1) ? quizzes['final'] + " %" : "Not yet attempted";
 	$("#final_exam_score").html(fscore);
 
 	if(checkTotal())
@@ -37,16 +37,17 @@ $("#dlpdf").click(function(event){
 });
 
 $("#go_final").click(function(event){
-	profile['current_module'] = 9;
+	profile['current_module'] = 13;
 	localStorage.setItem('profile', JSON.stringify(profile));
 	window.location.replace("course.html");
 });
 
 $(".table").on("click", "td a", function(){
+	modalpha = ($(this).data("module") + 9).toString(36);
 	if($(this).data("module") == 1 || ($(this).data("module") > 1 && quizzes[$(this).data("module")-1] >= 100)){
 		profile['current_module'] = $(this).data("module");
 		localStorage.setItem('profile', JSON.stringify(profile));
-	    window.location = 'course.html?mq=' + $(this).data("module");
+	    window.location = 'course.html?t=' + modalpha;
 	}else{
 		window.alert("You need to get a perfect score on the previous quiz to proceed.");
 	}
