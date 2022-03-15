@@ -247,7 +247,10 @@ DG.QuizMaker = new Class( {
 		ret.numCorrectAnswers = numCorrectAnswers;
 		ret.percentageCorrectAnswers = Math.round(numCorrectAnswers / this.internal.questions.length *100);
 
-		var topic = document.getElementsByTagName("title")[0].innerHTML.charAt(6);
+		var topicA = document.getElementsByTagName("title")[0].innerHTML.charAt(6);
+		var topicB = document.getElementsByTagName("title")[0].innerHTML.charAt(7);
+		topic = Number("" + topicA + topicB);
+
 		quizzes = JSON.parse(localStorage.getItem('quizzes'));
 
 		if(topic=='E')

@@ -20,7 +20,7 @@ $(document).ready(function() {
 });
 
 $(".list-unstyled li a").click(function(){
-	if($(this).data("value") <= 13){
+	if($(this).data("value") <= 11){
 		profile['current_module'] = $(this).data("value");
 		localStorage.setItem('profile', JSON.stringify(profile));
 	}
@@ -58,7 +58,7 @@ function changeModule(module){
 			$("#module_quiz").addClass("invisible");
 			$("#module_questions").addClass("invisible");
 			break;
-		case 13:
+		case 11:
 			if(checkTotal()){
 				$('#currentframe').attr('src', 'quiz/final-exam.html');
 				iframe_desc_header = "";

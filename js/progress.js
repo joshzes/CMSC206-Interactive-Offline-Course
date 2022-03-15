@@ -37,7 +37,7 @@ $("#dlpdf").click(function(event){
 });
 
 $("#go_final").click(function(event){
-	profile['current_module'] = 13;
+	profile['current_module'] = 11;
 	localStorage.setItem('profile', JSON.stringify(profile));
 	window.location.replace("course.html");
 });
