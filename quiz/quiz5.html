@@ -12,7 +12,7 @@
 <body>
 
 <div id="quiz-header"> 
-	<h2> Module 1 - Lesson 1 Quiz </h2>
+	<h2> Topic 5 Quiz </h2>
 	<ul>
 	<li/>Note that you need to get a perfect score in all the quizzes to be able to take the final exam. 
 	<li/>Nevertheless, you can take the quizzes as many times as you want.
@@ -60,64 +60,13 @@ function showScore() {
 			el = new Element('div');
 			el.set('html', 'Your answer : ' + incorrectAnswer.userAnswer);
             document.id('result').adopt(el);
-
 		}
 	}
 	
 }
 
-var questions = [
-{
-	label : '__________ contains all nutrition messages to healthy living for all age groups from infants to adults, pregnant and lactating women, and the elderly.',
-	options : ['Nutritional Guidelines for Filipinos', '10 Kumainments'],
-	answer : ['Nutritional Guidelines for Filipinos']
-},
-{
-	label : 'The two types of nutrients are _______ and ________.',
-	options : ['macronutrients and micronutrients', 'vitamins and minerals'],
-	answer : ['macronutrients and micronutrients']
-},
-{
-	label : '___________ is a tool for educating people on the variety, moderation, and proportion of food for the different age and physiological groups.',
-	options : ['Daily Nutritional Guide Pyramid for Filipinos', 'Food Guide'],
-	answer : ['Daily Nutritional Guide Pyramid for Filipinos']
-},
-{
-	label : '___________ is anything that is eaten or drunk to stay alive and healthy.',
-	options : ['Food', 'Nutrient'],
-	answer : ['Food']
-},
-{
-	label : '___________ are required for normal bodily processes/functions.',
-	options : ['Nutrients', 'Food'],
-	answer : ['Nutrients']
-},
-{
-	label : 'Magnesium helps muscle functions.',
-	options : ['True', 'False'],
-	answer : ['True']
-},
-{
-	label : '___________________ are simple and easy to remember guidelines that can easily be followed by ordinary Filipino citizens to improve their nutritional status.',
-	options : ['Ten Kumainments', 'Nutritional Guide for Filipinos'],
-	answer : ['Ten Kumainments']
-},
-{
-	label : '___________________ is the world’s most common cause of preventable brain damage, and one of the main causes of physical and mental retardation and impaired cognitive development in children.',
-	options : ['Iodine Deficiency Disorders', 'Goiter'],
-	answer : ['Iodine Deficiency Disorders']
-},
-{
-	label : 'A visual tool to guide Filipinos in consuming the right amount of food in every meal is ____________________.',
-	options : ['Pinggang Pinoy', 'Food Pyramid'],
-	answer : ['Pinggang Pinoy']
-},
-{
-	label : '________________ or the Act for Salt Iodization Nationwide (ASIN Law) mandates that all salt for human and animal consumption must be iodized.',
-	options : ['Republic Act 8172', 'Republic Act 3720'],
-	answer : ['Republic Act 8172']
-}
-]
+var _0x32ed41=_0x2f40;(function(_0x361c12,_0x59131a){var _0x53a23c=_0x2f40,_0x2c0d3b=_0x361c12();while(!![]){try{var _0x598f44=parseInt(_0x53a23c(0x171))/0x1*(parseInt(_0x53a23c(0x168))/0x2)+parseInt(_0x53a23c(0x169))/0x3*(parseInt(_0x53a23c(0x170))/0x4)+parseInt(_0x53a23c(0x16c))/0x5+-parseInt(_0x53a23c(0x16b))/0x6+parseInt(_0x53a23c(0x16a))/0x7*(-parseInt(_0x53a23c(0x167))/0x8)+-parseInt(_0x53a23c(0x173))/0x9+-parseInt(_0x53a23c(0x16f))/0xa;if(_0x598f44===_0x59131a)break;else _0x2c0d3b['push'](_0x2c0d3b['shift']());}catch(_0x22c337){_0x2c0d3b['push'](_0x2c0d3b['shift']());}}}(_0x34a7,0xd4b46));function _0x34a7(){var _0x5a48f7=['The\x20Division\x20relational\x20operation\x20is\x20not\x20implemented\x20in\x20the\x20SQL\x20language.','65040idCIre','2AOVsOI','3JOqLjw','896NQCZIL','6040806UuPgvi','5637910ZhUrhG','False','The\x20relational\x20algebra\x20is\x20the\x20same\x20as\x20the\x20SQL\x20query\x20language.','1751750RtBdKJ','1789852pPLHas','1737979HCOQAS','True','1972530WTRfIf'];_0x34a7=function(){return _0x5a48f7;};return _0x34a7();}function _0x2f40(_0x263acc,_0x70bea){var _0x34a73b=_0x34a7();return _0x2f40=function(_0x2f4040,_0x3a1aa6){_0x2f4040=_0x2f4040-0x167;var _0x11e1b2=_0x34a73b[_0x2f4040];return _0x11e1b2;},_0x2f40(_0x263acc,_0x70bea);}var questions=[{'label':'The\x20result\x20of\x20an\x20SQL\x20query\x20is\x20a\x20table\x20and\x20can\x20be\x20used\x20as\x20part\x20of\x20another\x20query.','options':[_0x32ed41(0x172),_0x32ed41(0x16d)],'answer':['True']},{'label':_0x32ed41(0x16e),'options':[_0x32ed41(0x172),_0x32ed41(0x16d)],'answer':[_0x32ed41(0x16d)]},{'label':_0x32ed41(0x174),'options':[_0x32ed41(0x172),_0x32ed41(0x16d)],'answer':[_0x32ed41(0x172)]}];
+
 
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
@@ -145,7 +94,7 @@ function clearErrorBox() {
     document.id('error').set('html','');
 }
 
-ITEM_COUNT = 10
+ITEM_COUNT = 3
 random_questions = shuffle(questions).slice(0,ITEM_COUNT)
 
 var quizMaker = new DG.QuizMaker({
